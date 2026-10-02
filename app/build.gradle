@@ -1,0 +1,20 @@
+plugins {
+    id 'com.android.application'
+}
+
+android {
+    namespace 'com.kaizen.print'
+    compileSdk 33
+
+    defaultConfig {
+        applicationId "com.kaizen.print"
+        minSdk 23
+        targetSdk 28
+        versionCode 1
+        versionName "0.1"
+    }
+}
+
+dependencies {
+    implementation 'com.github.Fuelin-net:pax_sdk:0.0.7'
+}
