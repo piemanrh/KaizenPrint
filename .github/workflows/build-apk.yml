@@ -24,6 +24,12 @@ jobs:
         with:
           gradle-version: "7.6.4"
 
+      - name: Download PAX NeptuneLite API
+        run: |
+          mkdir -p app/libs
+          curl -L --fail --retry 3             https://raw.githubusercontent.com/Fuelin-net/pax_sdk/main/android/libs/neptune-lite-api-v3.26.00-20210903.jar             -o app/libs/neptune-lite-api.jar
+          ls -lh app/libs/neptune-lite-api.jar
+
       - name: Build debug APK
         run: gradle assembleDebug --stacktrace
 
